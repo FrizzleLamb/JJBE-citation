@@ -43,16 +43,7 @@ chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
       var author = authorTag ? authorTag.getAttribute('content') : '';
 
       // Construct the citation text with the extracted information
-      var citationText = `{{Citation
-        |author = ${author}
-        |handle =
-        |url = ${url}
-        |title = ${title}
-        |date = ${date}
-        |publisher = ${publisher}
-        |platform =
-        |archived =
-      }}`;
+      var citationText = `{{Citation |author = ${author} |handle = |url = ${url} |title = ${title} |date = ${date} |publisher = ${publisher} |platform = |archived = }}`;
 
       // Copy the citation text to the clipboard
       navigator.clipboard.writeText(citationText);
