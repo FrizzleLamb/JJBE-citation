@@ -1,0 +1,28 @@
+{
+  "name": "JJBE Citation Generator",
+  "version": "1.0.1",
+  "description": "Generates formatted citations for JoJo's Bizarre Encyclopedia.",
+  "manifest_version": 3,
+  "author": "frizzle@jojowiki.com",   
+  "icons": {
+    "128": "jjbe_128.png"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "clipboardWrite"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://twitter.com/*"],
+      "js": ["popup.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
